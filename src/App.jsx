@@ -5,19 +5,6 @@ import Questions from "./components/Questions";
 import Timer from "./components/Timer";
 
 function App() {
-  var single = 0;
-
-  function Singleton() {
-    if (single === 0) {
-      single++;
-      return (
-        <div>
-          <TalkToMe />
-        </div>
-      );
-    }
-  }
-
   return (
     <>
       <TalkToMe />
