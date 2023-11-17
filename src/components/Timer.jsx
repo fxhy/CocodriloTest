@@ -1,84 +1,56 @@
 import React, { useState, useRef, useEffect } from "react";
 
-function Timer() {
-  const Ref = useRef(null);
+function Timer({ onTimerFinish }) {
+  const [minutes, setMinutes] = useState(6); // Set the initial minutes
+  const [seconds, setSeconds] = useState(45); // Set the initial seconds
+  const [timerStarted, setTimerStarted] = useState(false);
+  var reset = true;
 
-  // The state for our timer
-  const [timer, setTimer] = useState("00:00:00");
-
-  const getTimeRemaining = (e) => {
-    const total = Date.parse(e) - Date.parse(new Date());
-    const seconds = Math.floor((total / 1000) % 60);
-    const minutes = Math.floor((total / 1000 / 60) % 60);
-    const hours = Math.floor((total / 1000 / 60 / 60) % 24);
-    return {
-      total,
-      hours,
-      minutes,
-      seconds,
-    };
-  };
-
-  const startTimer = (e) => {
-    let { total, hours, minutes, seconds } = getTimeRemaining(e);
-    if (total >= 0) {
-      // update the timer
-      // check if less than 10 then we need to
-      // add '0' at the beginning of the variable
-      setTimer(
-        (hours > 9 ? hours : "0" + hours) +
-          ":" +
-          (minutes > 9 ? minutes : "0" + minutes) +
-          ":" +
-          (seconds > 9 ? seconds : "0" + seconds)
-      );
-    }
-  };
-
-  const clearTimer = (e) => {
-    // If you adjust it you should also need to
-    // adjust the Endtime formula we are about
-    // to code next
-    setTimer("00:06:46");
-
-    // If you try to remove this line the
-    // updating of timer Variable will be
-    // after 1000ms or 1sec
-    if (Ref.current) clearInterval(Ref.current);
-    const id = setInterval(() => {
-      startTimer(e);
-    }, 1000);
-    Ref.current = id;
-  };
-
-  const getDeadTime = () => {
-    let deadline = new Date();
-
-    // This is where you need to adjust if
-    // you entend to add more time
-    deadline.setSeconds(deadline.getSeconds() + 406);
-    return deadline;
-  };
-
-  // We can use useEffect so that when the component
-  // mount the timer will start as soon as possible
-
-  // We put empty array to act as componentDid
-  // mount only
   useEffect(() => {
-    setTimeout(function () {
-      // Code, der erst nach 2 Sekunden ausgeführt wird
-      clearTimer(getDeadTime());
-    }, 67000);
-  }, []);
+    if (!timerStarted) {
+      // If the timer hasn't started yet, delay the start by 60 seconds
+      const delayTimer = setTimeout(() => {
+        setTimerStarted(true);
+        reset = true;
+      }, 66000);
 
-  // Another way to call the clearTimer() to start
-  // the countdown is via action event from the
-  // button first we create function to be called
-  // by the button
-  const onClickReset = () => {
-    clearTimer(getDeadTime());
-  };
-  return timer;
+      // Cleanup the delay timer on component unmount
+      return () => clearTimeout(delayTimer);
+    }
+
+    const timer = setInterval(() => {
+      if (minutes === 0 && seconds === 0) {
+        // When the timer reaches 0, clear the interval and finish the timer
+        clearInterval(timer);
+        if (reset) {
+          onTimerFinish();
+          reset = false;
+        }
+      } else {
+        // Update minutes and seconds
+        const prevMinutes = minutes;
+        const prevSeconds = seconds;
+        if (seconds === 0) {
+          setSeconds(59);
+          setMinutes((prevMinutes) => (prevMinutes > 0 ? prevMinutes - 1 : 0));
+        } else {
+          setSeconds((prevSeconds) => prevSeconds - 1);
+        }
+      }
+    }, 1000);
+
+    // Cleanup the interval on component unmount
+    return () => clearInterval(timer);
+  }, [onTimerFinish, timerStarted, minutes, seconds]);
+
+  return (
+    <div>
+      <p>
+        Timer: {String(minutes).padStart(2, "0")}:
+        {String(seconds).padStart(2, "0")}
+      </p>
+      {/* You can customize the timer display based on your UI requirements */}
+    </div>
+  );
 }
 export default Timer;

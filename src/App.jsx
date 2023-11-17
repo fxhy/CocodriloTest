@@ -3,44 +3,18 @@ import Instructions from "./components/Instruction";
 import TalkToMe from "./components/TalkToMe";
 import Questions from "./components/Questions";
 import Timer from "./components/Timer";
+import Warning from "./components/Warning";
 
 function App() {
   return (
     <>
       <TalkToMe />
-
+      {/* <Warning /> */}
       <div>
-        <h1>
-          Countdown: <Timer />
-        </h1>
         <Instructions />
       </div>
       <div>
-        <h1>PREGUNTAS</h1>
-
-        <ul className="questionList">
-          {Questions.map((q) => {
-            return (
-              <li key={q.id}>
-                <h4>
-                  {q.id}. {q.text}
-                </h4>
-                {q.options.map((option) => {
-                  return (
-                    <div>
-                      <input
-                        type="radio"
-                        value={option.isCorrect}
-                        name={q.id}
-                      />{" "}
-                      {option.text}
-                    </div>
-                  );
-                })}
-              </li>
-            );
-          })}
-        </ul>
+        <Questions />
       </div>
     </>
   );
