@@ -12,6 +12,21 @@ function TalkToMe() {
 
   // return window.speechSynthesis.speak(msg);
   let audio = new Audio(sound);
-  audio.play();
+  console.log(navigator.getAutoplayPolicy(audio));
+  if (navigator.getAutoplayPolicy(audio) === "allowed") {
+    audio.play();
+  } else {
+    audio.play();
+    return (
+      <div className="info">
+        <h1>
+          Welcome to CocodriloTest! If the audio file doesn't start
+          automatically, please make sure that your browser has audio enabled
+          for this site. You can check your browser settings to enabling audio.
+          Thank you!
+        </h1>
+      </div>
+    );
+  }
 }
 export default TalkToMe;
