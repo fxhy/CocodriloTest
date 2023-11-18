@@ -12,7 +12,7 @@ function Timer({ onTimerFinish }) {
       const delayTimer = setTimeout(() => {
         setTimerStarted(true);
         reset = true;
-      }, 66000);
+      }, 56000);
 
       // Cleanup the delay timer on component unmount
       return () => clearTimeout(delayTimer);
