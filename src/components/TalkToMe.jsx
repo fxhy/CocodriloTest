@@ -12,8 +12,9 @@ function TalkToMe() {
 
   // return window.speechSynthesis.speak(msg);
   let audio = new Audio(sound);
-  console.log(navigator.getAutoplayPolicy(audio));
+
   try {
+    console.log(navigator.getAutoplayPolicy(audio));
     if (navigator.getAutoplayPolicy(audio) === "allowed") {
       audio.play();
     } else {
