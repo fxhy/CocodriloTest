@@ -13,7 +13,7 @@ function TalkToMe() {
   // return window.speechSynthesis.speak(msg);
   let audio = new Audio(sound);
   console.log(navigator.getAutoplayPolicy(audio));
-  if (navigator.getAutoplayPolicy(audio)) {
+  try {
     if (navigator.getAutoplayPolicy(audio) === "allowed") {
       audio.play();
     } else {
@@ -29,7 +29,8 @@ function TalkToMe() {
         </div>
       );
     }
-  } else {
+  } catch (error) {
+    console.error(error);
     audio.play();
   }
 }
