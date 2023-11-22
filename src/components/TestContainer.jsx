@@ -26,11 +26,21 @@ function TestContainer() {
   return (
     <section className="page-section portfolio" id="portfolio">
       <div className="container">
-        <TalkToMe />
-        {/* <Warning /> */}
-        <div>
-          <Instructions />
-        </div>
+        <Container>
+          <Row>
+            <Col>
+              <Instructions />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <TalkToMe />
+              {/* <Warning /> */}
+            </Col>
+            <Col></Col>
+          </Row>
+        </Container>
+
         <div>
           <Questions />
         </div>

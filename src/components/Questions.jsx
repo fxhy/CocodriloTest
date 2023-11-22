@@ -1,8 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
-
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Timer from "./Timer";
 
 function Questions() {
+  var colNum = 0;
   const dynamicQuestions = [
     {
       id: 25,
@@ -151,6 +154,29 @@ function Questions() {
     // Trigger the form submission when the timer finishes
     handleSubmit();
   };
+  const getQuestionTable = () => {
+    return dynamicQuestions.map((question) => (
+      <li key={question.id}>
+        <h4>
+          {question.id}. {question.text}
+        </h4>
+        {question.options.map((option) => (
+          <div>
+            <label key={option.id}>
+              <input
+                type="radio"
+                name={question.id}
+                value={option.id}
+                checked={formData[question.id] === option.id}
+                onChange={handleChange}
+              />
+              {option.text}
+            </label>
+          </div>
+        ))}
+      </li>
+    ));
+  };
 
   return (
     <>
@@ -160,32 +186,50 @@ function Questions() {
         </h1>
       </div>
       <div>
-        <h1>PREGUNTAS</h1>
         <main>
           <form onSubmit={handleSubmit}>
-            <ul className="questionList">
-              {dynamicQuestions.map((question) => (
-                <li key={question.id}>
-                  <h4>
-                    {question.id}. {question.text}
-                  </h4>
-                  {question.options.map((option) => (
-                    <div>
-                      <label key={option.id}>
-                        <input
-                          type="radio"
-                          name={question.id}
-                          value={option.id}
-                          checked={formData[question.id] === option.id}
-                          onChange={handleChange}
-                        />
-                        {option.text}
-                      </label>
-                    </div>
-                  ))}
-                </li>
-              ))}
-            </ul>
+            <Container fluid>
+              <h3 className="page-section-heading text-center text-uppercase text-secondary mb-0">
+                PREGUNTAS
+              </h3>
+              <div className="divider-custom">
+                <div className="divider-custom-line"></div>
+                <div className="divider-custom-icon">
+                  <i className="fas fa-star"></i>
+                </div>
+                <div className="divider-custom-line"></div>
+              </div>
+              <Row gy={5}>
+                {dynamicQuestions.map((question) => {
+                  return (
+                    <Col lg={6} key={question.id} className="py-3">
+                      <li key={question.id} className="list-group">
+                        <h4>
+                          {question.id}. {question.text}
+                        </h4>
+                        {question.options.map((option) => {
+                          return (
+                            <div>
+                              <label key={option.id}>
+                                <input
+                                  type="radio"
+                                  name={question.id}
+                                  value={option.id}
+                                  checked={formData[question.id] === option.id}
+                                  onChange={handleChange}
+                                />
+                                {option.text}
+                              </label>
+                            </div>
+                          );
+                        })}
+                      </li>
+                    </Col>
+                  );
+                })}
+              </Row>
+            </Container>
+            {/* <ul className="questionList">{getQuestionTable()}</ul> */}
             <button type="submit" ref={buttonRef}>
               Submit
             </button>
