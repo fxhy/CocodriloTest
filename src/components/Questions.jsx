@@ -154,29 +154,6 @@ function Questions() {
     // Trigger the form submission when the timer finishes
     handleSubmit();
   };
-  const getQuestionTable = () => {
-    return dynamicQuestions.map((question) => (
-      <li key={question.id}>
-        <h4>
-          {question.id}. {question.text}
-        </h4>
-        {question.options.map((option) => (
-          <div>
-            <label key={option.id}>
-              <input
-                type="radio"
-                name={question.id}
-                value={option.id}
-                checked={formData[question.id] === option.id}
-                onChange={handleChange}
-              />
-              {option.text}
-            </label>
-          </div>
-        ))}
-      </li>
-    ));
-  };
 
   return (
     <>
