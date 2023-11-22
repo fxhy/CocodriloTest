@@ -1,6 +1,6 @@
 import "./assets/scss/styles.scss";
 import React, { useState, useRef, useEffect } from "react";
-
+import smile from "./assets/img/avataaars.svg";
 import TestContainer from "./components/TestContainer";
 import About from "./components/About";
 import Footer from "./components/Footer";
@@ -16,11 +16,7 @@ function App() {
       <FakeNavbar />
       <header className="masthead bg-primary text-white text-center">
         <div className="container d-flex align-items-center flex-column">
-          <img
-            className="masthead-avatar mb-5"
-            src="src/assets/img/avataaars.svg"
-            alt="..."
-          />
+          <img className="masthead-avatar mb-5" src={smile} alt="..." />
 
           <h1 className="masthead-heading text-uppercase mb-0">
             COCODRILO TEST
