@@ -14,7 +14,7 @@ function Questions() {
         {
           id: "a",
           text: "a) empezó a escalar hace 18 años.",
-          isCorrect: false,
+          isCorrect: true,
         },
         {
           id: "b",
@@ -24,7 +24,7 @@ function Questions() {
         {
           id: "c",
           text: "c) montó su empresa con su pareja.",
-          isCorrect: true,
+          isCorrect: false,
         },
       ],
     },
@@ -35,7 +35,7 @@ function Questions() {
         {
           id: "a",
           text: "a) realiza trabajos en lugares de difícil acceso.",
-          isCorrect: false,
+          isCorrect: true,
         },
         {
           id: "b",
@@ -45,7 +45,7 @@ function Questions() {
         {
           id: "c",
           text: "c) se dedica a la prevención de riesgos laborales.",
-          isCorrect: true,
+          isCorrect: false,
         },
       ],
     },
@@ -53,12 +53,12 @@ function Questions() {
       id: 27,
       text: "Pilar Almagro dice que Vertisub en sus comienzos operaba...",
       options: [
-        { id: "a", text: "a) en un entorno urbano.", isCorrect: true },
+        { id: "a", text: "a) en un entorno urbano.", isCorrect: false },
         { id: "b", text: "b) fuera de España.", isCorrect: false },
         {
           id: "c",
           text: "c) en las obras de la Sagrada Familia.",
-          isCorrect: false,
+          isCorrect: true,
         },
       ],
     },
@@ -69,12 +69,12 @@ function Questions() {
         {
           id: "a",
           text: "a) fabricar material de escalada y espeleología.",
-          isCorrect: true,
+          isCorrect: false,
         },
         {
           id: "b",
           text: "b) desarrollar sistemas de seguridad.",
-          isCorrect: false,
+          isCorrect: true,
         },
         {
           id: "c",
@@ -88,8 +88,8 @@ function Questions() {
       text: "La empresaria Pilar Almagro dice que los empleados de Vertisub...",
       options: [
         { id: "a", text: "a) no llegan a 200.", isCorrect: false },
-        { id: "b", text: "b) han hecho cursos de escalada.", isCorrect: true },
-        { id: "c", text: "c) son personas prudentes.", isCorrect: false },
+        { id: "b", text: "b) han hecho cursos de escalada.", isCorrect: false },
+        { id: "c", text: "c) son personas prudentes.", isCorrect: true },
       ],
     },
     {
