@@ -1,0 +1,55 @@
+.audio-icon {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: #989898;
+  }
+  /* controls */
+.controls-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .controls button, .volume button {
+    border: none;
+    background-color: transparent;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  
+  button svg {
+    font-size: 20px;
+  }
+  
+  .volume {
+    display: flex;
+    align-items: center;
+  }
+  
+  .volume button {
+    margin: 0;
+  }
+  
+  .progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  /* time */
+  .time {
+    color: #333;
+    font-size: 13px;
+    line-height: 46px;
+  }
+  
+  .time.current {
+    color: #f50;
+  }
