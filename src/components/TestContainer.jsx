@@ -1,11 +1,14 @@
 import Button from "react-bootstrap/Button";
 import AudioQuestion from "./AudioQuestion";
+import ReadingQuestion from "./ReadingQuestion";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import React, { useState, useRef, useEffect } from "react";
 import { MDBBtn } from "mdb-react-ui-kit";
-import { Eyeglasses } from "react-bootstrap-icons";
+import p1 from "../assets/img/portfolio/1.png";
+import p2 from "../assets/img/portfolio/2.png";
+import p3 from "../assets/img/portfolio/3.png";
 
 import "../assets/scss/styles.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,6 +22,7 @@ function TestContainer() {
   const [questionType, setQuestionType] = useState(0);
   const [questionSubType, setQuestionSubType] = useState(0);
   const [showAudioQuestion, setShowAudioQuestion] = useState(false);
+  const [showReadingQuestion, setShowReadingQuestion] = useState(false);
 
   // reference
   const timerStart = useRef();
@@ -51,14 +55,20 @@ function TestContainer() {
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
                 data-bs-target="#portfolioModal2"
-                onClick={() => setshowAudioQuestion(!showAudioQuestion)}
+                onClick={() => {
+                  setShowAudioQuestion(!showAudioQuestion);
+                  setShowReadingQuestion(false);
+                }}
               >
                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                   <div className="portfolio-item-caption-content text-center text-white">
                     <FontAwesomeIcon
                       icon={faPlus}
                       size="3x"
-                      onClick={() => setshowAudioQuestion(!showAudioQuestion)}
+                      onClick={() => {
+                        setShowAudioQuestion(!showAudioQuestion);
+                        setShowReadingQuestion(false);
+                      }}
                     />
                   </div>
                 </div>
@@ -72,14 +82,20 @@ function TestContainer() {
                       left: "50%",
                       transform: "translate(-50%, -50%)",
                     }}
-                    onClick={() => setshowAudioQuestion(!showAudioQuestion)}
+                    onClick={() => {
+                      setShowAudioQuestion(!showAudioQuestion);
+                      setShowReadingQuestion(false);
+                    }}
                   />
 
                   <img
                     className="img-fluid"
-                    src="src/assets/img/portfolio/2.png"
+                    src={p2}
                     alt="..."
-                    onClick={() => setshowAudioQuestion(!showAudioQuestion)}
+                    onClick={() => {
+                      setShowAudioQuestion(!showAudioQuestion);
+                      setShowReadingQuestion(false);
+                    }}
                   />
                 </div>
               </div>
@@ -89,6 +105,10 @@ function TestContainer() {
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
                 data-bs-target="#portfolioModal2"
+                onClick={() => {
+                  setShowReadingQuestion(!showReadingQuestion);
+                  setShowAudioQuestion(false);
+                }}
               >
                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                   <div className="portfolio-item-caption-content text-center text-white">
@@ -107,11 +127,7 @@ function TestContainer() {
                   }}
                 />
 
-                <img
-                  className="img-fluid"
-                  src="src/assets/img/portfolio/1.png"
-                  alt="..."
-                />
+                <img className="img-fluid" src={p1} alt="..." />
               </div>
             </Col>
             <Col>
@@ -137,15 +153,12 @@ function TestContainer() {
                   }}
                 />
 
-                <img
-                  className="img-fluid"
-                  src="src/assets/img/portfolio/3.png"
-                  alt="..."
-                />
+                <img className="img-fluid" src={p3} alt="..." />
               </div>
             </Col>
           </Row>
           {showAudioQuestion ? <AudioQuestion /> : null}
+          {showReadingQuestion ? <ReadingQuestion /> : null}
         </Container>
       </div>
     </section>

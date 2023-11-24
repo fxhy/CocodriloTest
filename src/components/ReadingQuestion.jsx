@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import Instructions from "../components/Instruction";
-import TalkToMe from "../components/TalkToMe/TalkToMe";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -192,7 +191,7 @@ function Questions({ questionType, questionSubType, timerStart }) {
                 <div className="divider-custom-line"></div>
               </div>
               <div>
-                <textarea>{textToRead}</textarea>
+                <p>{textToRead}</p>
               </div>
             </Container>
             <Container fluid>
