@@ -50,7 +50,7 @@ function TestContainer() {
         </div>
         <Container>
           <Row>
-            <Col className="p-3">
+            <Col md={4} className="p-3">
               <div
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
@@ -99,8 +99,11 @@ function TestContainer() {
                   />
                 </div>
               </div>
+              <div>
+                <h3>Comprensión auditiva</h3>
+              </div>
             </Col>
-            <Col className="p-3">
+            <Col md={4} className="p-3">
               <div
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
@@ -129,8 +132,9 @@ function TestContainer() {
 
                 <img className="img-fluid" src={p1} alt="..." />
               </div>
+              <h3>Comprensión de lectura</h3>
             </Col>
-            <Col className="p-3">
+            <Col md={4} className="p-3">
               <div
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
@@ -155,6 +159,7 @@ function TestContainer() {
 
                 <img className="img-fluid" src={p3} alt="..." />
               </div>
+              <h3>expresión e interacción escritas</h3>
             </Col>
           </Row>
         </Container>
