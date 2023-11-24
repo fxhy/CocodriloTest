@@ -1,21 +1,28 @@
 import Button from "react-bootstrap/Button";
-import Instructions from "../components/Instruction";
-import TalkToMe from "../components/TalkToMe/TalkToMe";
-import Questions from "../components/Questions";
+import AudioQuestion from "./AudioQuestion";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { MDBBtn } from "mdb-react-ui-kit";
 import { Eyeglasses } from "react-bootstrap-icons";
 
 import "../assets/scss/styles.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faHeadphones } from "@fortawesome/free-solid-svg-icons";
+import { faGlasses } from "@fortawesome/free-solid-svg-icons";
+import { faFeather } from "@fortawesome/free-solid-svg-icons";
 
 function TestContainer() {
+  // states
+  const [questionType, setQuestionType] = useState(0);
+  const [questionSubType, setQuestionSubType] = useState(0);
+  const [showAudioQuestion, setShowAudioQuestion] = useState(false);
+
+  // reference
+  const timerStart = useRef();
+
   const red = "#ff7373";
   const redCom = "#52b7b7";
   const turquoise = "#39a3b7";
@@ -26,24 +33,120 @@ function TestContainer() {
   return (
     <section className="page-section portfolio" id="portfolio">
       <div className="container">
+        <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">
+          Subjects
+        </h2>
+
+        <div className="divider-custom">
+          <div className="divider-custom-line"></div>
+          <div className="divider-custom-icon">
+            <i className="fas fa-star"></i>
+          </div>
+          <div className="divider-custom-line"></div>
+        </div>
         <Container>
           <Row>
             <Col>
-              <Instructions />
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <TalkToMe />
-              {/* <Warning /> */}
-            </Col>
-            <Col></Col>
-          </Row>
-        </Container>
+              <div
+                className="portfolio-item mx-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#portfolioModal2"
+                onClick={() => setshowAudioQuestion(!showAudioQuestion)}
+              >
+                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                  <div className="portfolio-item-caption-content text-center text-white">
+                    <FontAwesomeIcon
+                      icon={faPlus}
+                      size="3x"
+                      onClick={() => setshowAudioQuestion(!showAudioQuestion)}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <FontAwesomeIcon
+                    icon={faHeadphones}
+                    size="4x"
+                    style={{
+                      position: "absolute",
+                      top: "50%",
+                      left: "50%",
+                      transform: "translate(-50%, -50%)",
+                    }}
+                    onClick={() => setshowAudioQuestion(!showAudioQuestion)}
+                  />
 
-        <div>
-          <Questions />
-        </div>
+                  <img
+                    className="img-fluid"
+                    src="src/assets/img/portfolio/2.png"
+                    alt="..."
+                    onClick={() => setshowAudioQuestion(!showAudioQuestion)}
+                  />
+                </div>
+              </div>
+            </Col>
+            <Col>
+              <div
+                className="portfolio-item mx-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#portfolioModal2"
+              >
+                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                  <div className="portfolio-item-caption-content text-center text-white">
+                    <FontAwesomeIcon icon={faPlus} size="3x" />
+                  </div>
+                </div>
+
+                <FontAwesomeIcon
+                  icon={faGlasses}
+                  size="4x"
+                  style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                  }}
+                />
+
+                <img
+                  className="img-fluid"
+                  src="src/assets/img/portfolio/1.png"
+                  alt="..."
+                />
+              </div>
+            </Col>
+            <Col>
+              <div
+                className="portfolio-item mx-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#portfolioModal2"
+              >
+                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                  <div className="portfolio-item-caption-content text-center text-white">
+                    <FontAwesomeIcon icon={faPlus} size="3x" />
+                  </div>
+                </div>
+
+                <FontAwesomeIcon
+                  icon={faFeather}
+                  size="4x"
+                  style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                  }}
+                />
+
+                <img
+                  className="img-fluid"
+                  src="src/assets/img/portfolio/3.png"
+                  alt="..."
+                />
+              </div>
+            </Col>
+          </Row>
+          {showAudioQuestion ? <AudioQuestion /> : null}
+        </Container>
       </div>
     </section>
   );

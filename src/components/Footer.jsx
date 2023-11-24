@@ -1,4 +1,9 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
   return (
@@ -8,34 +13,32 @@ function Footer() {
           <div className="col-lg-4 mb-5 mb-lg-0">
             <h4 className="text-uppercase mb-4">Location</h4>
             <p className="lead mb-0">
-              2215 John Daniel Drive
+              1234 Hop Av.
               <br />
-              Clark, MO 65243
+              The Island, BOO 12345
             </p>
           </div>
 
           <div className="col-lg-4 mb-5 mb-lg-0">
             <h4 className="text-uppercase mb-4">Around the Web</h4>
             <a className="btn btn-outline-light btn-social mx-1" href="#!">
-              <i className="fab fa-fw fa-facebook-f"></i>
+              <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
             <a className="btn btn-outline-light btn-social mx-1" href="#!">
-              <i className="fab fa-fw fa-twitter"></i>
+              <FontAwesomeIcon icon={faXTwitter} />
             </a>
             <a className="btn btn-outline-light btn-social mx-1" href="#!">
-              <i className="fab fa-fw fa-linkedin-in"></i>
+              <FontAwesomeIcon icon={faInstagram} />
             </a>
             <a className="btn btn-outline-light btn-social mx-1" href="#!">
-              <i className="fab fa-fw fa-dribbble"></i>
+              <FontAwesomeIcon icon={faFacebookF} />
             </a>
           </div>
 
           <div className="col-lg-4">
-            <h4 className="text-uppercase mb-4">About Freelancer</h4>
+            <h4 className="text-uppercase mb-4">About Cocodrilo</h4>
             <p className="lead mb-0">
-              Freelance is a free to use, MIT licensed Bootstrap theme created
-              by
-              <a href="http://startbootstrap.com">Start Bootstrap</a>.
+              Cocodrilo is a welcome excuse to avoid doing work that gets paid.
             </p>
           </div>
         </div>

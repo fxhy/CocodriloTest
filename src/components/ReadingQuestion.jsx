@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
+import Instructions from "../components/Instruction";
+import TalkToMe from "../components/TalkToMe/TalkToMe";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -6,6 +8,9 @@ import Timer from "./Timer";
 
 function Questions({ questionType, questionSubType, timerStart }) {
   var colNum = 0;
+  const textToRead =
+    "El ejercicio físico no solo sirve para sacar músculo, parecer saludables y guapos, y ponernos de buen humor. También nos ayuda a concentrarnos mejor y aumentar nuestra productividad. Así lo demuestra el estudio El efecto del ejercicio físico en la productividad laboral y el bienestar, que analiza la buena relación entre la actividad laboral y la práctica de un programa controlado de ejercicio físico. En el estudio participaron 92 empleados de una empresa de consultoría que cuenta con 230 empleados en plantilla. \n Fue una experiencia divertida en la que se mezclaban varias cosas: el compañerismo, competitividad y la extraña sensación de poder realizar esta actividad como parte del trabajo», recuerda Eduardo Loyola, directivo de la consultoría Interface. Loyola fue uno de los conejillos de Indias del programa diseñado por Óscar de las Mozas, coautor del estudio. <<Entrenábamos fuera del horario laboral. Al principio, a algunos compañeros les resultó complicado (sentían vergüenza al verse con indumentaria deportiva), pero pronto nos encontramos trotando por el monte o por pistas de atletismo sin ningún problema. Creo que tener una hora de entrenamiento con los compañeros favorece el trabajo en equipo», dice Loyola.\n Los resultados de la investigación no aclaran, sin embargo, si es mejor que el entrenamiento se realice antes o después de la jornada laboral. De las Mozas explica que antes del trabajo, debido a la secreción de compuestos químicos cerebrales que desencadena la actividad física, se potencia la sensación de bienestar, se llega a la oficina más relajado y con mayor disposición. No obstante, muchas personas prefieren entrenar al salir del trabajo, porque así el ejercicio les funciona como una válvula de escape. Lo que queda fuera de toda duda es que después de al menos tres meses siguiendo un programa de actividad física, los resultados productivos de un adulto sano mejoran y la gente se muestra más dispuesta a colaborar por una meta común.\n Los beneficios más concretos observados fueron la mejora de la salud del equipo humano y la mayor facilidad para asumir las tareas de la vida cotidiana, ya impliquen fuerza física o trabajo intelectual. Asimismo, se constató una mayor resistencia en los momentos de tensión y un incremento de la satisfacción en el trabajo.\n El estudio también arroja otros datos que tienen que ver con los beneficios sobre el absentismo en el trabajo, pues se observó una disminución de casi un 30% en las bajas laborales de los empleados que participaron en esta experiencia, lo que apunta a la necesidad de que las empresas incentiven este tipo de programas en todos los niveles de su organigrama, ya que además de potenciar el compañerismo o la competitividad, los profesionales tienen la sensación de realizar esta actividad no como una posibilidad de evasión, sino como parte específica del propio trabajo.";
+
   const dynamicQuestions = [
     {
       id: 25,
@@ -158,11 +163,21 @@ function Questions({ questionType, questionSubType, timerStart }) {
   return (
     <>
       <div>
-        <h1>
-          <Timer onTimerFinish={programmaticClick} />
-        </h1>
-      </div>
-      <div>
+        <Container>
+          <Row>
+            <Col>
+              <Instructions />
+            </Col>
+          </Row>
+          <Row className="py-3">
+            <Col className="py-3">
+              <h2 className="text-end ">
+                <Timer onTimerFinish={programmaticClick} />
+              </h2>
+            </Col>
+          </Row>
+        </Container>
+
         <main>
           <form onSubmit={handleSubmit}>
             <Container fluid>
@@ -176,7 +191,22 @@ function Questions({ questionType, questionSubType, timerStart }) {
                 </div>
                 <div className="divider-custom-line"></div>
               </div>
-              <Row gy={5}>
+              <div>
+                <textarea>{textToRead}</textarea>
+              </div>
+            </Container>
+            <Container fluid>
+              <h3 className="page-section-heading text-center text-uppercase text-secondary mb-0">
+                PREGUNTAS
+              </h3>
+              <div className="divider-custom">
+                <div className="divider-custom-line"></div>
+                <div className="divider-custom-icon">
+                  <i className="fas fa-star"></i>
+                </div>
+                <div className="divider-custom-line"></div>
+              </div>
+              <Row>
                 {dynamicQuestions.map((question) => {
                   return (
                     <Col lg={6} key={question.id} className="py-3">
