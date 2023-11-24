@@ -50,7 +50,7 @@ function TestContainer() {
         </div>
         <Container>
           <Row>
-            <Col>
+            <Col className="p-3">
               <div
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
@@ -100,7 +100,7 @@ function TestContainer() {
                 </div>
               </div>
             </Col>
-            <Col>
+            <Col className="p-3">
               <div
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
@@ -130,7 +130,7 @@ function TestContainer() {
                 <img className="img-fluid" src={p1} alt="..." />
               </div>
             </Col>
-            <Col>
+            <Col className="p-3">
               <div
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
@@ -157,9 +157,9 @@ function TestContainer() {
               </div>
             </Col>
           </Row>
-          {showAudioQuestion ? <AudioQuestion /> : null}
-          {showReadingQuestion ? <ReadingQuestion /> : null}
         </Container>
+        {showAudioQuestion ? <AudioQuestion /> : null}
+        {showReadingQuestion ? <ReadingQuestion /> : null}
       </div>
     </section>
   );

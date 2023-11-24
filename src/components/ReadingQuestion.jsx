@@ -7,104 +7,136 @@ import Timer from "./Timer";
 
 function Questions({ questionType, questionSubType, timerStart }) {
   var colNum = 0;
-  const textToRead =
-    "El ejercicio físico no solo sirve para sacar músculo, parecer saludables y guapos, y ponernos de buen humor. También nos ayuda a concentrarnos mejor y aumentar nuestra productividad. Así lo demuestra el estudio El efecto del ejercicio físico en la productividad laboral y el bienestar, que analiza la buena relación entre la actividad laboral y la práctica de un programa controlado de ejercicio físico. En el estudio participaron 92 empleados de una empresa de consultoría que cuenta con 230 empleados en plantilla. \n Fue una experiencia divertida en la que se mezclaban varias cosas: el compañerismo, competitividad y la extraña sensación de poder realizar esta actividad como parte del trabajo», recuerda Eduardo Loyola, directivo de la consultoría Interface. Loyola fue uno de los conejillos de Indias del programa diseñado por Óscar de las Mozas, coautor del estudio. <<Entrenábamos fuera del horario laboral. Al principio, a algunos compañeros les resultó complicado (sentían vergüenza al verse con indumentaria deportiva), pero pronto nos encontramos trotando por el monte o por pistas de atletismo sin ningún problema. Creo que tener una hora de entrenamiento con los compañeros favorece el trabajo en equipo», dice Loyola.\n Los resultados de la investigación no aclaran, sin embargo, si es mejor que el entrenamiento se realice antes o después de la jornada laboral. De las Mozas explica que antes del trabajo, debido a la secreción de compuestos químicos cerebrales que desencadena la actividad física, se potencia la sensación de bienestar, se llega a la oficina más relajado y con mayor disposición. No obstante, muchas personas prefieren entrenar al salir del trabajo, porque así el ejercicio les funciona como una válvula de escape. Lo que queda fuera de toda duda es que después de al menos tres meses siguiendo un programa de actividad física, los resultados productivos de un adulto sano mejoran y la gente se muestra más dispuesta a colaborar por una meta común.\n Los beneficios más concretos observados fueron la mejora de la salud del equipo humano y la mayor facilidad para asumir las tareas de la vida cotidiana, ya impliquen fuerza física o trabajo intelectual. Asimismo, se constató una mayor resistencia en los momentos de tensión y un incremento de la satisfacción en el trabajo.\n El estudio también arroja otros datos que tienen que ver con los beneficios sobre el absentismo en el trabajo, pues se observó una disminución de casi un 30% en las bajas laborales de los empleados que participaron en esta experiencia, lo que apunta a la necesidad de que las empresas incentiven este tipo de programas en todos los niveles de su organigrama, ya que además de potenciar el compañerismo o la competitividad, los profesionales tienen la sensación de realizar esta actividad no como una posibilidad de evasión, sino como parte específica del propio trabajo.";
-
+  const textToRead = [
+    "El ejercicio físico no solo sirve para sacar músculo, parecer saludables y guapos, y ponernos de buen humor. También nos ayuda a concentrarnos mejor y aumentar nuestra productividad. Así lo demuestra el estudio El efecto del ejercicio físico en la productividad laboral y el bienestar, que analiza la buena relación entre la actividad laboral y la práctica de un programa controlado de ejercicio físico. En el estudio participaron 92 empleados de una empresa de consultoría que cuenta con 230 empleados en plantilla. \n",
+    "\n<<Fue una experiencia divertida en la que se mezclaban varias cosas: el compañerismo, competitividad y la extraña sensación de poder realizar esta actividad como parte del trabajo», recuerda Eduardo Loyola, directivo de la consultoría Interface. Loyola fue uno de los conejillos de Indias del programa diseñado por Óscar de las Mozas, coautor del estudio. <<Entrenábamos fuera del horario laboral. Al principio, a algunos compañeros les resultó complicado (sentían vergüenza al verse con indumentaria deportiva), pero pronto nos encontramos trotando por el monte o por pistas de atletismo sin ningún problema. Creo que tener una hora de entrenamiento con los compañeros favorece el trabajo en equipo», dice Loyola.\n",
+    "\nLos resultados de la investigación no aclaran, sin embargo, si es mejor que el entrenamiento se realice antes o después de la jornada laboral. De las Mozas explica que antes del trabajo, debido a la secreción de compuestos químicos cerebrales que desencadena la actividad física, se potencia la sensación de bienestar, se llega a la oficina más relajado y con mayor disposición. No obstante, muchas personas prefieren entrenar al salir del trabajo, porque así el ejercicio les funciona como una válvula de escape. Lo que queda fuera de toda duda es que después de al menos tres meses siguiendo un programa de actividad física, los resultados productivos de un adulto sano mejoran y la gente se muestra más dispuesta a colaborar por una meta común.\n",
+    "\nLos beneficios más concretos observados fueron la mejora de la salud del equipo humano y la mayor facilidad para asumir las tareas de la vida cotidiana, ya impliquen fuerza física o trabajo intelectual. Asimismo, se constató una mayor resistencia en los momentos de tensión y un incremento de la satisfacción en el trabajo.\n",
+    "\nEl estudio también arroja otros datos que tienen que ver con los beneficios sobre el absentismo en el trabajo, pues se observó una disminución de casi un 30% en las bajas laborales de los empleados que participaron en esta experiencia, lo que apunta a la necesidad de que las empresas incentiven este tipo de programas en todos los niveles de su organigrama, ya que además de potenciar el compañerismo o la competitividad, los profesionales tienen la sensación de realizar esta actividad no como una posibilidad de evasión, sino como parte específica del propio trabajo.",
+  ];
   const dynamicQuestions = [
     {
-      id: 25,
-      text: "En la audición, la empresaria Pilar Almagro cuenta que...",
+      id: 1,
+      text: "En el texto se informa de que la práctica de ejercicio físico...",
       options: [
         {
           id: "a",
-          text: "a) empezó a escalar hace 18 años.",
+          text: "a) incrementa las ganas de trabajar.",
           isCorrect: true,
         },
         {
           id: "b",
-          text: "b) conoció a su marido trabajando.",
+          text: "b) debe hacerse de modo controlado.",
           isCorrect: false,
         },
         {
           id: "c",
-          text: "c) montó su empresa con su pareja.",
+          text: "c) incide en el rendimiento laboral.",
           isCorrect: false,
         },
       ],
     },
     {
-      id: 26,
-      text: "Pilar Almagro dice que la empresa Vertisub...",
+      id: 2,
+      text: "Según el texto, el programa de ejercicio físico del estudio...",
       options: [
         {
           id: "a",
-          text: "a) realiza trabajos en lugares de difícil acceso.",
+          text: "a) se aplicó a más de 200 trabajadores.",
           isCorrect: true,
         },
         {
           id: "b",
-          text: "b) produce y vende material de rescate.",
+          text: "b) se desarrollaba en horas de trabajo.",
           isCorrect: false,
         },
         {
           id: "c",
-          text: "c) se dedica a la prevención de riesgos laborales.",
+          text: "c) fue creado por Óscar de las Mozas.",
           isCorrect: false,
         },
       ],
     },
     {
-      id: 27,
-      text: "Pilar Almagro dice que Vertisub en sus comienzos operaba...",
-      options: [
-        { id: "a", text: "a) en un entorno urbano.", isCorrect: false },
-        { id: "b", text: "b) fuera de España.", isCorrect: false },
-        {
-          id: "c",
-          text: "c) en las obras de la Sagrada Familia.",
-          isCorrect: true,
-        },
-      ],
-    },
-    {
-      id: 28,
-      text: "Según la audición, la empresa Vertisub también se dedica a...",
+      id: 3,
+      text: "En el texto Eduardo Loyola dice que...",
       options: [
         {
           id: "a",
-          text: "a) fabricar material de escalada y espeleología.",
+          text: "a) se sentía raro haciendo deporte.",
           isCorrect: false,
         },
         {
           id: "b",
-          text: "b) desarrollar sistemas de seguridad.",
+          text: "b) el programa incluía deporte al aire libre.",
+          isCorrect: false,
+        },
+        {
+          id: "c",
+          text: "c) gracias al entrenamiento rendía más.",
+          isCorrect: true,
+        },
+      ],
+    },
+    {
+      id: 4,
+      text: "En el texto se dice que los beneficios de hacer deporte...",
+      options: [
+        {
+          id: "a",
+          text: "a) se sienten tras la jornada laboral.",
+          isCorrect: false,
+        },
+        {
+          id: "b",
+          text: "b) se aprecian sobre todo en la empresa.",
           isCorrect: true,
         },
         {
           id: "c",
-          text: "c) vender material especializado.",
+          text: "c) empiezan a notarse a partir de tres meses.",
           isCorrect: false,
         },
       ],
     },
     {
-      id: 29,
-      text: "La empresaria Pilar Almagro dice que los empleados de Vertisub...",
+      id: 5,
+      text: "Según la investigación, la práctica de deporte sirve para...",
       options: [
-        { id: "a", text: "a) no llegan a 200.", isCorrect: false },
-        { id: "b", text: "b) han hecho cursos de escalada.", isCorrect: false },
-        { id: "c", text: "c) son personas prudentes.", isCorrect: true },
+        {
+          id: "a",
+          text: "a) afrontar con mayor disposición la vida diaria.",
+          isCorrect: false,
+        },
+        {
+          id: "b",
+          text: "b) aumentar la capacidad intelectual.",
+          isCorrect: false,
+        },
+        {
+          id: "c",
+          text: "c) reducir la competencia entre trabajadores.",
+          isCorrect: true,
+        },
       ],
     },
     {
       id: 30,
-      text: "Pilar Almagro dice que el éxito de su empresa se debe a...",
+      text: "Según el texto, si las empresas ofrecieran programas deportivos a sus plantillas,...",
       options: [
-        { id: "a", text: "a) la formación de su plantilla.", isCorrect: false },
-        { id: "b", text: "b) saber cómo crecer.", isCorrect: true },
+        {
+          id: "a",
+          text: "a) aumentarían un 30% el rendimiento.",
+          isCorrect: false,
+        },
+        {
+          id: "b",
+          text: "b) reducirían el absentismo laboral.",
+          isCorrect: true,
+        },
         {
           id: "c",
-          text: "c) una estrategia de diversificación comercial.",
+          text: "c) disminuiría el estrés en el trabajo.",
           isCorrect: true,
         },
       ],
@@ -165,7 +197,21 @@ function Questions({ questionType, questionSubType, timerStart }) {
         <Container>
           <Row>
             <Col>
-              <Instructions />
+              <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">
+                Instrucciones
+              </h2>
+              <div className="divider-custom">
+                <div className="divider-custom-line"></div>
+                <div className="divider-custom-icon">
+                  <i className="fas fa-star"></i>
+                </div>
+                <div className="divider-custom-line"></div>
+              </div>
+              <div className="text-center ">
+                Usted va a leer un texto sobre el efecto que tiene el ejercicio
+                físico en la productividad laboral. Después, debe contestar a
+                las preguntas (1-6). Seleccione la opción correcta (a / b / c).
+              </div>
             </Col>
           </Row>
           <Row className="py-3">
@@ -181,7 +227,7 @@ function Questions({ questionType, questionSubType, timerStart }) {
           <form onSubmit={handleSubmit}>
             <Container fluid>
               <h3 className="page-section-heading text-center text-uppercase text-secondary mb-0">
-                PREGUNTAS
+                Un entrenador en la oficina
               </h3>
               <div className="divider-custom">
                 <div className="divider-custom-line"></div>
@@ -190,8 +236,12 @@ function Questions({ questionType, questionSubType, timerStart }) {
                 </div>
                 <div className="divider-custom-line"></div>
               </div>
-              <div>
-                <p>{textToRead}</p>
+              <div className="text ">
+                <p>
+                  {textToRead.map((line) => {
+                    return <p>{line}</p>;
+                  })}
+                </p>
               </div>
             </Container>
             <Container fluid>
