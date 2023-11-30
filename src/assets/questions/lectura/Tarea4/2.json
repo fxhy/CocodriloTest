@@ -1,0 +1,220 @@
+
+{
+  "level": {
+    "id": "B2LeT4_2",
+    "section": {
+      "type": "reading",
+      "prompt": "Complete el texto rellenando los huecos (20-27) con la opción correcta (A/H).",
+      "headline": "EL CAMINO VERDE",
+      "passage": "Cuando comencé a caminar por El Camino Verde, me pregunté 20. . Es un sendero que pone a prueba tu resistencia, con su belleza cautivadora y sus desafíos imprevistos. La naturaleza siempre ha sido 21. .\nEste sendero puede no gozar de la misma popularidad que los caminos urbanos más transitados, pero 22. . Cuando te adentras en él, eres recibido por el suave susurro de las hojas, el canto de los pájaros y el remanso de paz creado por el burbujeante arroyo que corre a lo largo de 23. .\nEl viaje estuvo lleno de sorpresas y me enseñó cosas nuevas 24. . Hubo momentos en que sentí que ya no podía más 25. . Pero sin importar cuán duros eran los desafíos, 26. . Al final de este viaje, el camino verde me demostró que 27. para alcanzar cualquier cosa en la vida.",
+      "question": [
+        {
+          "id": "20",
+          "correct": "A",
+          "choices": [
+            {
+              "id": "A",
+              "text": "si realmente estaba preparada física y mentalmente para este viaje tan desafiante"
+            },
+            {
+              "id": "B",
+              "text": "si sería mejor regresar a casa y no continuar con este viaje"
+            }
+          ]
+        },
+        {
+          "id": "21",
+          "correct": "B",
+          "choices": [
+            {
+              "id": "A",
+              "text": "una amenaza aterradora que prefería evitar"
+            },
+            {
+              "id": "B",
+              "text": "una fuente de fascinación y una razón para explorar lo desconocido"
+            }
+          ]
+        },
+        {
+          "id": "22",
+          "correct": "C",
+          "choices": [
+            {
+              "id": "A",
+              "text": "esto solo lleva a la gente a subestimar su belleza"
+            },
+            {
+              "id": "B",
+              "text": "esto ha provocado que la naturaleza sea destruida por el hombre"
+            },
+            {
+              "id": "C",
+              "text": "considero que esto es lo que aumenta su encanto, da un sentido de exclusividad"
+            }
+          ]
+        },
+        {
+          "id": "23",
+          "correct": "D",
+          "choices": [
+            {
+              "id": "A",
+              "text": "una moderna autopista"
+            },
+            {
+              "id": "B",
+              "text": "un camino de ciudad congestionado"
+            },
+            {
+              "id": "C",
+              "text": "un sendero de montaña empinado"
+            },
+            {
+              "id": "D",
+              "text": "su ruta tortuosa, convirtiéndolo en una obra de arte de la naturaleza"
+            }
+          ]
+        },
+        {
+          "id": "24",
+         "correct": "E",
+          "choices": [
+            {
+              "id": "A",
+              "text": "sobre plantas tóxicas y animales peligrosos"
+            },
+            {
+              "id": "B",
+              "text": "sobre cómo sobrevivir en el desierto y cómo empezar un fuego"
+            },
+            {
+              "id": "C",
+              "text": "sobre lugares a los que definitivamente no volvería"
+            },
+            {
+              "id": "D",
+              "text": "sobre sitios escondidos que solo se pueden encontrar en un mapa"
+            },
+            {
+              "id": "E",
+              "text": "sobre mi propia resistencia y mis habilidades para superar los obstáculos"
+            }
+          ]
+        },
+        {
+          "id": "25",
+          "correct": "F",
+          "choices": [
+            {
+              "id": "A",
+              "text": "pero seguí adelante, motivada por el temor a fracasar"
+            },
+            {
+              "id": "B",
+              "text": "y consideré seriamente la posibilidad de abandonar y darla vuelta"
+            },
+            {
+              "id": "C",    
+            "text": "pero sabía que había dejado la civilización demasiado atrás para rendirme"
+            },
+            {
+              "id": "D",
+              "text": "entonces simplemente cerraba los ojos y dejaba que el sonido de la naturaleza me calmara"
+            },
+            {
+              "id": "F",
+              "text": "y en más de una ocasión sentí ganas de rendirme y dirigirme a la comodidad de mi hogar"
+            }
+          ]
+        },
+        {
+          "id": "26",
+          "correct": "G",
+          "choices": [
+            {
+              "id": "A",
+              "text": "siempre encontraba la fuerza para seguir adelante, inspirada por la belleza del entorno"
+            },
+            {
+              "id": "B",
+              "text": "encontré el apoyo que necesitaba en los otros senderistas que encontraba en el camino"
+            },
+            {
+              "id": "C",
+              "text": "buscaba la motivación en los logros que ya había alcanzado durante el viaje"
+            },
+            {
+              "id": "G",
+              "text": "nunca me rendí, siempre estaba ese persistente deseo de superación, de probarme a mí misma que podía hacerlo"
+            }
+          ]
+        },
+        {
+          "id": "27",
+          "correct": "H",
+          "choices": [
+            {
+              "id": "A",
+              "text": "se necesita un par de zapatos cómodos"
+            },
+            {
+              "id": "B",
+              "text": "mantener una actitud positiva es la clave"
+            },
+            {
+              "id": "C",
+              "text": "todos deberían tener un mapa a mano"
+            },
+            {
+              "id": "D",
+              "text": "necesitas un buen sentido de orientación"
+            },
+            {
+              "id": "E",
+              "text": "no puedes hacerlo sin preparación previa"
+            },
+            {
+              "id": "H",
+              "text": "se necesita mucho más que simplemente caminar o la voluntad de llegar a la meta zado durante el viaje"
+            },
+            {
+              "id": "G",
+              "text": "nunca me rendí, siempre estaba ese persistente deseo de superación, de probarme a mí misma que podía hacerlo"
+            }
+          ]
+        },
+        {
+          "id": "27",
+          "correct": "H",
+          "choices": [
+            {
+              "id": "A",
+              "text": "se necesita un par de zapatos cómodos"
+            },
+            {
+              "id": "B",
+              "text": "mantener una actitud positiva es la clave"
+            },
+            {
+              "id": "C",
+              "text": "todos deberían tener un mapa a mano"
+            },
+            {
+              "id": "D",
+              "text": "necesitas un buen sentido de orientación"
+            },
+            {
+              "id": "E",
+              "text": "no puedes hacerlo sin preparación previa"
+            },
+            {
+              "id": "H",
+              "text": "se necesita mucho más que simplemente caminar o la voluntad de llegar a la meta"
+            }
+          ]
+        }
+      ]
+    }
+}
+  }
