@@ -9,6 +9,7 @@ import Warning from "./components/Warning";
 import FakeNavbar from "./components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContactInfo from "./components/ContactInfo";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           <div className="divider-custom divider-light">
             <div className="divider-custom-line"></div>
             <div className="divider-custom-icon">
-              <i className="fas fa-star"></i>
+              <FontAwesomeIcon icon={faStar} />{" "}
             </div>
             <div className="divider-custom-line"></div>
           </div>

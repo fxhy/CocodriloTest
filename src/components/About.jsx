@@ -2,6 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 import "../assets/css/styles.css";
 
 function About() {
@@ -15,7 +16,7 @@ function About() {
         <div className="divider-custom divider-light">
           <div className="divider-custom-line"></div>
           <div className="divider-custom-icon">
-            <i className="fas fa-star"></i>
+            <FontAwesomeIcon icon={faStar} />{" "}
           </div>
           <div className="divider-custom-line"></div>
         </div>

@@ -1,113 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
-import Instructions from "../components/Instruction";
-import TalkToMe from "../components/TalkToMe/TalkToMe";
+import Instructions from "../Instruction";
+import JsonData from "../../assets/questions/lectura/Tarea4/1.json";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Timer from "./Timer";
+import Timer from "../Timer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 function Questions({ questionType, questionSubType, timerStart }) {
   var colNum = 0;
-  const dynamicQuestions = [
-    {
-      id: 25,
-      text: "En la audición, la empresaria Pilar Almagro cuenta que...",
-      options: [
-        {
-          id: "a",
-          text: "a) empezó a escalar hace 18 años.",
-          isCorrect: true,
-        },
-        {
-          id: "b",
-          text: "b) conoció a su marido trabajando.",
-          isCorrect: false,
-        },
-        {
-          id: "c",
-          text: "c) montó su empresa con su pareja.",
-          isCorrect: false,
-        },
-      ],
-    },
-    {
-      id: 26,
-      text: "Pilar Almagro dice que la empresa Vertisub...",
-      options: [
-        {
-          id: "a",
-          text: "a) realiza trabajos en lugares de difícil acceso.",
-          isCorrect: true,
-        },
-        {
-          id: "b",
-          text: "b) produce y vende material de rescate.",
-          isCorrect: false,
-        },
-        {
-          id: "c",
-          text: "c) se dedica a la prevención de riesgos laborales.",
-          isCorrect: false,
-        },
-      ],
-    },
-    {
-      id: 27,
-      text: "Pilar Almagro dice que Vertisub en sus comienzos operaba...",
-      options: [
-        { id: "a", text: "a) en un entorno urbano.", isCorrect: false },
-        { id: "b", text: "b) fuera de España.", isCorrect: false },
-        {
-          id: "c",
-          text: "c) en las obras de la Sagrada Familia.",
-          isCorrect: true,
-        },
-      ],
-    },
-    {
-      id: 28,
-      text: "Según la audición, la empresa Vertisub también se dedica a...",
-      options: [
-        {
-          id: "a",
-          text: "a) fabricar material de escalada y espeleología.",
-          isCorrect: false,
-        },
-        {
-          id: "b",
-          text: "b) desarrollar sistemas de seguridad.",
-          isCorrect: true,
-        },
-        {
-          id: "c",
-          text: "c) vender material especializado.",
-          isCorrect: false,
-        },
-      ],
-    },
-    {
-      id: 29,
-      text: "La empresaria Pilar Almagro dice que los empleados de Vertisub...",
-      options: [
-        { id: "a", text: "a) no llegan a 200.", isCorrect: false },
-        { id: "b", text: "b) han hecho cursos de escalada.", isCorrect: false },
-        { id: "c", text: "c) son personas prudentes.", isCorrect: true },
-      ],
-    },
-    {
-      id: 30,
-      text: "Pilar Almagro dice que el éxito de su empresa se debe a...",
-      options: [
-        { id: "a", text: "a) la formación de su plantilla.", isCorrect: false },
-        { id: "b", text: "b) saber cómo crecer.", isCorrect: true },
-        {
-          id: "c",
-          text: "c) una estrategia de diversificación comercial.",
-          isCorrect: true,
-        },
-      ],
-    },
-  ];
 
   const [isTimerFinished, setTimerFinished] = useState(false);
 
@@ -119,6 +21,8 @@ function Questions({ questionType, questionSubType, timerStart }) {
     }
   };
   const initialFormData = {};
+  var dynamicQuestions = JsonData.level.section.question;
+  var textToRead = JsonData.level.section.passage;
   dynamicQuestions.forEach((question) => {
     initialFormData[question.id] = ""; // Initialize with empty values
   });
@@ -139,13 +43,10 @@ function Questions({ questionType, questionSubType, timerStart }) {
     dynamicQuestions.forEach((quest) => {
       const findQuestion = (element) => element === quest.id.toString();
       var gues = ans[que.findIndex(findQuestion)];
-      quest.options.forEach((opt) => {
-        if (opt.id === gues) {
-          if (opt.isCorrect) {
-            score++;
-          }
-        }
-      });
+
+      if (quest.correct === gues) {
+        score++;
+      }
     });
     alert(
       "Time is up! Your test score is: " + score + "/" + dynamicQuestions.length
@@ -163,14 +64,22 @@ function Questions({ questionType, questionSubType, timerStart }) {
         <Container>
           <Row>
             <Col>
-              <Instructions />
+              <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">
+                Instrucciones
+              </h2>
+              <div className="divider-custom">
+                <div className="divider-custom-line"></div>
+                <div className="divider-custom-icon">
+                  <FontAwesomeIcon icon={faStar} />
+                </div>
+                <div className="divider-custom-line"></div>
+              </div>
+              <div className="text-center ">
+                {JsonData.level.section.prompt}
+              </div>
             </Col>
           </Row>
           <Row className="py-3">
-            <Col sm lg="2" className="py-3">
-              <TalkToMe />
-              {/* <Warning /> */}
-            </Col>
             <Col className="py-3">
               <h2 className="text-end ">
                 <Timer onTimerFinish={programmaticClick} />
@@ -183,24 +92,39 @@ function Questions({ questionType, questionSubType, timerStart }) {
           <form onSubmit={handleSubmit}>
             <Container fluid>
               <h3 className="page-section-heading text-center text-uppercase text-secondary mb-0">
-                PREGUNTAS
+                {JsonData.level.section.headline}
               </h3>
               <div className="divider-custom">
                 <div className="divider-custom-line"></div>
                 <div className="divider-custom-icon">
-                  <i className="fas fa-star"></i>
+                  <FontAwesomeIcon icon={faStar} />{" "}
+                </div>
+                <div className="divider-custom-line"></div>
+              </div>
+              <div className="text ">
+                <p>{textToRead}</p>
+              </div>
+            </Container>
+            <Container fluid>
+              <h3 className="page-section-heading text-center text-uppercase text-secondary mb-0">
+                OPCIÓNES
+              </h3>
+              <div className="divider-custom">
+                <div className="divider-custom-line"></div>
+                <div className="divider-custom-icon">
+                  <FontAwesomeIcon icon={faStar} />{" "}
                 </div>
                 <div className="divider-custom-line"></div>
               </div>
               <Row>
                 {dynamicQuestions.map((question) => {
                   return (
-                    <Col lg={6} key={question.id} className="py-3">
+                    <Col lg={2} key={question.id} className="py-3">
                       <li key={question.id} className="list-group">
                         <h4>
                           {question.id}. {question.text}
                         </h4>
-                        {question.options.map((option) => {
+                        {question.choices.map((option) => {
                           return (
                             <div>
                               <label key={option.id}>
@@ -211,7 +135,7 @@ function Questions({ questionType, questionSubType, timerStart }) {
                                   checked={formData[question.id] === option.id}
                                   onChange={handleChange}
                                 />
-                                {option.text}
+                                {" " + option.id + "): " + option.text}
                               </label>
                             </div>
                           );

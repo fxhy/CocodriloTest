@@ -1,6 +1,7 @@
 import Button from "react-bootstrap/Button";
-import AudioQuestion from "./AudioQuestion";
-import ReadingQuestion from "./ReadingQuestion";
+import AudioQuestion from "./QuestionTypes/AudioQuestion";
+import ReadingQuestion from "./QuestionTypes/ReadingQuestion";
+import WritingQuestion from "./QuestionTypes/WritingQuestion";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -16,6 +17,7 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faHeadphones } from "@fortawesome/free-solid-svg-icons";
 import { faGlasses } from "@fortawesome/free-solid-svg-icons";
 import { faFeather } from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 function TestContainer() {
   // states
@@ -23,6 +25,7 @@ function TestContainer() {
   const [questionSubType, setQuestionSubType] = useState(0);
   const [showAudioQuestion, setShowAudioQuestion] = useState(false);
   const [showReadingQuestion, setShowReadingQuestion] = useState(false);
+  const [showWritingQuestion, setShowWritingQuestion] = useState(false);
 
   // reference
   const timerStart = useRef();
@@ -44,7 +47,7 @@ function TestContainer() {
         <div className="divider-custom">
           <div className="divider-custom-line"></div>
           <div className="divider-custom-icon">
-            <i className="fas fa-star"></i>
+            <FontAwesomeIcon icon={faStar} />
           </div>
           <div className="divider-custom-line"></div>
         </div>
@@ -58,6 +61,7 @@ function TestContainer() {
                 onClick={() => {
                   setShowAudioQuestion(!showAudioQuestion);
                   setShowReadingQuestion(false);
+                  setShowWritingQuestion(false);
                 }}
               >
                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
@@ -68,6 +72,7 @@ function TestContainer() {
                       onClick={() => {
                         setShowAudioQuestion(!showAudioQuestion);
                         setShowReadingQuestion(false);
+                        setShowWritingQuestion(false);
                       }}
                     />
                   </div>
@@ -85,6 +90,7 @@ function TestContainer() {
                     onClick={() => {
                       setShowAudioQuestion(!showAudioQuestion);
                       setShowReadingQuestion(false);
+                      setShowWritingQuestion(false);
                     }}
                   />
 
@@ -95,11 +101,12 @@ function TestContainer() {
                     onClick={() => {
                       setShowAudioQuestion(!showAudioQuestion);
                       setShowReadingQuestion(false);
+                      setShowWritingQuestion(false);
                     }}
                   />
                 </div>
               </div>
-              <div>
+              <div style={{ textalign: "center" }}>
                 <h3>Comprensión auditiva</h3>
               </div>
             </Col>
@@ -111,6 +118,7 @@ function TestContainer() {
                 onClick={() => {
                   setShowReadingQuestion(!showReadingQuestion);
                   setShowAudioQuestion(false);
+                  setShowWritingQuestion(false);
                 }}
               >
                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
@@ -139,6 +147,11 @@ function TestContainer() {
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
                 data-bs-target="#portfolioModal2"
+                onClick={() => {
+                  setShowWritingQuestion(!showWritingQuestion);
+                  setShowReadingQuestion(false);
+                  setShowAudioQuestion(false);
+                }}
               >
                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                   <div className="portfolio-item-caption-content text-center text-white">
@@ -165,6 +178,7 @@ function TestContainer() {
         </Container>
         {showAudioQuestion ? <AudioQuestion /> : null}
         {showReadingQuestion ? <ReadingQuestion /> : null}
+        {showWritingQuestion ? <WritingQuestion /> : null}
       </div>
     </section>
   );

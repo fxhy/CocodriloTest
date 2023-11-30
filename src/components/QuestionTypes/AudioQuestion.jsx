@@ -1,8 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
+import Instructions from "../Instruction";
+import TalkToMe from "../TalkToMe/TalkToMe";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Timer from "./Timer";
+import Timer from "../Timer";
 
 function Questions({ questionType, questionSubType, timerStart }) {
   var colNum = 0;
@@ -158,11 +160,25 @@ function Questions({ questionType, questionSubType, timerStart }) {
   return (
     <>
       <div>
-        <h1>
-          <Timer onTimerFinish={programmaticClick} />
-        </h1>
-      </div>
-      <div>
+        <Container>
+          <Row>
+            <Col>
+              <Instructions />
+            </Col>
+          </Row>
+          <Row className="py-3">
+            <Col sm lg="2" className="py-3">
+              <TalkToMe />
+              {/* <Warning /> */}
+            </Col>
+            <Col className="py-3">
+              <h2 className="text-end ">
+                <Timer onTimerFinish={programmaticClick} />
+              </h2>
+            </Col>
+          </Row>
+        </Container>
+
         <main>
           <form onSubmit={handleSubmit}>
             <Container fluid>
@@ -176,7 +192,7 @@ function Questions({ questionType, questionSubType, timerStart }) {
                 </div>
                 <div className="divider-custom-line"></div>
               </div>
-              <Row gy={5}>
+              <Row>
                 {dynamicQuestions.map((question) => {
                   return (
                     <Col lg={6} key={question.id} className="py-3">

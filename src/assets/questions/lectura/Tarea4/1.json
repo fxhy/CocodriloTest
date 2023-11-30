@@ -1,0 +1,229 @@
+{
+    "level": {
+      "id": "B2LeT4_1",
+      "section": {
+        "type": "reading",
+        "prompt": "Lea el texto y rellene los huecos (23-36) con la opción correcta(a/b/c).",
+        "headline": "UNA TARDE DE OTOÑO",
+        "passage": "En silencio, tomé aire y comencé a caminar,\n          ___23___\n          el sendero de hojas caídas. El sol se filtraba\n          ___24___\n          los árboles, bañando el parque en una luz cálida y dorada. A lo lejos, pude oír el crujir de una rama, un indicio de que no estaba\n          ___25___\n          . Aunque estaba disfrutando de la soledad, sentí una leve inquietud. Todavía recordaba la última vez que me\n          ___26___\n          en esa situación. \n          En ese momento, sentí mi teléfono vibrar en mi bolsillo. Al revisarlo, me di cuenta de que era un mensaje de mi\n          ___27___\n          , Marta. El mensaje decía que ella ya\n          ___28___\n          en el lugar acordado y que me estaba esperando. Aumenté mi paso, intentando no tropezar con las raíces\n          ___29___\n          . \n          Finalmente, llegué al punto de encuentro y vi a Marta de pie junto a un viejo banco de madera. Su sonrisa brillante fue un claro indicativo de que ella \n          ___30___\n          muy contenta por verme. Nos sentamos en el banco y comenzamos a hablar\n          ___31___\n          nuestras vidas. La conversación se sentía tan natural, tan fluida, como si nunca nos hubiéramos ido de este hermoso parque, tan lleno de recuerdos\n          ___32___.\n          . Incluso en ese tranquilo atardecer, no pude evitar sentir que algo\n          ___33___\n          a nuestro alrededor. Sin embargo, decidí\n          ___34___\n          mis temores y disfrutar de ese reencuentro tan esperado.",
+        "question": [
+          {
+            "id": "23",
+            "correct": "a",
+            "choices": [
+              {
+                "id": "a",
+                "text": "sobre"
+              },
+              {
+                "id": "b",
+                "text": "en"
+              },
+              {
+                "id": "c",
+                "text": "durante"
+              }
+            ]
+          },
+          {
+            "id": "24",
+            "correct": "c",
+            "choices": [
+              {
+                "id": "a",
+                "text": "entre"
+              },
+              {
+                "id": "b",
+                "text": "dentro"
+              },
+              {
+                "id": "c",
+                "text": "a través"
+              }
+            ]
+          },
+          {
+            "id": "25",
+            "correct": "b",
+            "choices": [
+              {
+                "id": "a",
+                "text": "sólo"
+              },
+              {
+                "id": "b",
+                "text": "solo"
+              },
+              {
+                "id": "c",
+                "text": "solamente"
+              }
+            ]
+          },
+          {
+            "id": "26",
+            "correct": "b",
+            "choices": [
+              {
+                "id": "a",
+                "text": "encontraba"
+              },
+              {
+                "id": "b",
+                "text": "encontré"
+              },
+              {
+                "id": "c",
+                "text": "he encontrado"
+              }
+            ]
+          },
+          {
+            "id": "27",
+            "correct": "a",
+            "choices": [
+              {
+                "id": "a",
+                "text": "amiga"
+              },
+              {
+                "id": "b",
+                "text": "familia"
+              },
+              {
+                "id": "c",
+                "text": "novia"
+              }
+            ]
+          },
+          {
+            "id": "28",
+            "correct": "c",
+            "choices": [
+              {
+                "id": "a",
+                "text": "estaría"
+              },
+              {
+                "id": "b",
+                "text": "había estado"
+              },
+              {
+                "id": "c",
+                "text": "está"
+              }
+            ]
+          },
+          {
+            "id": "29",
+            "correct": "a",
+            "choices": [
+              {
+                "id": "a",
+                "text": "expuestas"
+              },
+              {
+                "id": "b",
+                "text": "expuesto"
+              },
+              {
+                "id": "c",
+                "text": "expuesta"
+              }
+            ]
+          },
+          {
+            "id": "30",
+            "correct": "c",
+            "choices": [
+              {
+                "id": "a",
+                "text": "era"
+              },
+              {
+                "id": "b",
+                "text": "estaría"
+              },
+              {
+                "id": "c",
+                "text": "estaba"
+              }
+            ]
+          },
+          {
+            "id": "31",
+            "correct": "c",
+            "choices": [
+              {
+                "id": "a",
+                "text": "de"
+              },
+              {
+                "id": "b",
+                "text": "a"
+              },
+              {
+                "id": "c",
+                "text": "en"
+              }
+            ]
+          },
+          {
+            "id": "32",
+            "correct": "a",
+            "choices": [
+              {
+                "id": "a",
+                "text": "inmutable"
+              },
+              {
+                "id": "b",
+                "text": "mutable"
+              },
+              {
+                "id": "c",
+                "text": "inmunes"
+              }
+            ]
+          },
+          {
+            "id": "33",
+            "correct": "b",
+            "choices": [
+              {
+                "id": "a",
+                "text": "fue cambiando"
+              },
+              {
+                "id": "b",
+                "text": "cambió"
+              },
+              {
+                "id": "c",
+                "text": "cambiará"
+              }
+            ]
+          },
+          {
+            "id": "34",
+            "correct": "a",
+            "choices": [
+              {
+                "id": "a",
+                "text": "ignorar"
+              },
+              {
+                "id": "b",
+                "text": "ignoró"
+              },
+              {
+                "id": "c",
+                "text": "ignore"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }

@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 function ContactInfo() {
   return (
@@ -11,7 +13,7 @@ function ContactInfo() {
         <div className="divider-custom">
           <div className="divider-custom-line"></div>
           <div className="divider-custom-icon">
-            <i className="fas fa-star"></i>
+            <FontAwesomeIcon icon={faStar} />{" "}
           </div>
           <div className="divider-custom-line"></div>
         </div>

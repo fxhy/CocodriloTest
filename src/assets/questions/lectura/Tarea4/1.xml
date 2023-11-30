@@ -1,0 +1,125 @@
+<deleTest>
+  <level id="B2LeT4_1">
+    <!-- Reading Section -->
+    <section type="reading">
+        <prompt>Lea el texto y rellene los huecos (23-36) con la opción correcta(a/b/c).</prompt>
+        <headline>UNA TARDE DE OTOÑO </headline>
+        <passage>En silencio, tomé aire y comencé a caminar,
+          ___23___
+          el sendero de hojas caídas. El sol se filtraba
+          ___24___
+          los árboles, bañando el parque en una luz cálida y dorada. A lo lejos, pude oír el crujir de una rama, un indicio de que no estaba
+          ___25___
+          . Aunque estaba disfrutando de la soledad, sentí una leve inquietud. Todavía recordaba la última vez que me
+          ___26___
+          en esa situación. 
+          En ese momento, sentí mi teléfono vibrar en mi bolsillo. Al revisarlo, me di cuenta de que era un mensaje de mi
+          ___27___
+          , Marta. El mensaje decía que ella ya
+          ___28___
+          en el lugar acordado y que me estaba esperando. Aumenté mi paso, intentando no tropezar con las raíces
+          ___29___
+          . 
+          Finalmente, llegué al punto de encuentro y vi a Marta de pie junto a un viejo banco de madera. Su sonrisa brillante fue un claro indicativo de que ella 
+          ___30___
+          muy contenta por verme. Nos sentamos en el banco y comenzamos a hablar
+          ___31___
+          nuestras vidas. La conversación se sentía tan natural, tan fluida, como si nunca nos hubiéramos ido de este hermoso parque, tan lleno de recuerdos
+          ___32___.
+          . Incluso en ese tranquilo atardecer, no pude evitar sentir que algo
+          ___33___
+          a nuestro alrededor. Sin embargo, decidí
+          ___34___
+          mis temores y disfrutar de ese reencuentro tan esperado.
+        </passage>
+      <question id="23" correct="a">
+          <choices>
+            <choice id="a">sobre</choice>
+            <choice id="b">en</choice>
+            <choice id="c">durante</choice>
+          </choices>
+      </question>
+      <question id="24" correct="c">
+          <choices>
+            <choice id="a">entre</choice>
+            <choice id="b">dentro</choice>
+            <choice id="c">a través</choice>
+          </choices>
+      </question>
+      <question id="25" correct="b">
+          <choices>
+            <choice id="a">sólo</choice>
+            <choice id="b">solo</choice>
+            <choice id="c">solamente</choice>
+          </choices>
+      </question>
+      <question id="26" correct="b">
+          <choices>
+            <choice id="a">encontraba</choice>
+            <choice id="b">encontré</choice>
+            <choice id="c">he encontrado</choice>
+          </choices>
+      </question>
+      <question id="27" correct="a">
+          <choices>
+            <choice id="a">amiga</choice>
+            <choice id="b">familia</choice>
+            <choice id="c">novia</choice>
+          </choices>
+      </question>
+      <question id="28" correct="c">
+          <choices>
+            <choice id="a">estaría</choice>
+            <choice id="b">había estado</choice>
+            <choice id="c">está</choice>
+          </choices>
+      </question>
+      <question id="29" correct="a">
+          <choices>
+            <choice id="a">expuestas</choice>
+            <choice id="b">expuesto</choice>
+            <choice id="c">expuesta</choice>
+          </choices>
+      </question>
+      <question id="30" correct="c">
+          <choices>
+            <choice id="a">era</choice>
+            <choice id="b">estaría</choice>
+            <choice id="c">estaba</choice>
+          </choices>
+      </question>
+      <question id="31" correct="c">
+          <choices>
+            <choice id="a">de</choice>
+            <choice id="b">a</choice>
+            <choice id="c">en</choice>
+          </choices>
+      </question>
+      <question id="32" correct="a">
+          <choices>
+            <choice id="a">inmutable</choice>
+            <choice id="b">mutable</choice>
+            <choice id="c">inmunes</choice>
+          </choices>
+      </question>
+      <question id="33" correct="b">
+          <choices>
+            <choice id="a">fue cambiando</choice>
+            <choice id="b">cambió</choice>
+            <choice id="c">cambiará</choice>
+          </choices>
+      </question>
+      <question id="34" correct="a">
+          <choices>
+            <choice id="a">ignorar</choice>
+            <choice id="b">ignoró</choice>
+            <choice id="c">ignore</choice>
+          </choices>
+      </question>
+
+    </section>
+
+
+  </level>
+
+</deleTest>

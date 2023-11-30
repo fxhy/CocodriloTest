@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
-import Instructions from "../components/Instruction";
+import Instructions from "../Instruction";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Timer from "./Timer";
+import Timer from "../Timer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 function Questions({ questionType, questionSubType, timerStart }) {
   var colNum = 0;
@@ -121,7 +123,7 @@ function Questions({ questionType, questionSubType, timerStart }) {
       ],
     },
     {
-      id: 30,
+      id: 6,
       text: "Según el texto, si las empresas ofrecieran programas deportivos a sus plantillas,...",
       options: [
         {
@@ -203,7 +205,7 @@ function Questions({ questionType, questionSubType, timerStart }) {
               <div className="divider-custom">
                 <div className="divider-custom-line"></div>
                 <div className="divider-custom-icon">
-                  <i className="fas fa-star"></i>
+                  <FontAwesomeIcon icon={faStar} />
                 </div>
                 <div className="divider-custom-line"></div>
               </div>
@@ -232,7 +234,7 @@ function Questions({ questionType, questionSubType, timerStart }) {
               <div className="divider-custom">
                 <div className="divider-custom-line"></div>
                 <div className="divider-custom-icon">
-                  <i className="fas fa-star"></i>
+                  <FontAwesomeIcon icon={faStar} />{" "}
                 </div>
                 <div className="divider-custom-line"></div>
               </div>
@@ -251,7 +253,7 @@ function Questions({ questionType, questionSubType, timerStart }) {
               <div className="divider-custom">
                 <div className="divider-custom-line"></div>
                 <div className="divider-custom-icon">
-                  <i className="fas fa-star"></i>
+                  <FontAwesomeIcon icon={faStar} />{" "}
                 </div>
                 <div className="divider-custom-line"></div>
               </div>
