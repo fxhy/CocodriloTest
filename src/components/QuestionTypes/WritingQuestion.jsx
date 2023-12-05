@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Instructions from "../Instruction";
-import JsonData from "../../assets/questions/lectura/Tarea4/2.json";
+import JsonData from "../../assets/questions/lectura/Tarea4/1.json";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
